@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/p ">
+
+<!--    <bean class="org.example.Student" name="student1">-->
+<!--        <property name="studentId">-->
+<!--            <value>101</value>-->
+<!--        </property>-->
+<!--        <property name="studentName">-->
+<!--            <value>Mansi</value>-->
+<!--        </property>-->
+<!--        <property name="studentAddress">-->
+<!--            <value>Sonipat</value>-->
+<!--        </property>-->
+<!--        &lt;!&ndash; collaborators and configuration for this bean go here &ndash;&gt;-->
+<!--    </bean>-->
+
+<!--    <bean class="org.example.Student" name="std1" p:studentId="123" p:studentName="xyz" p:studentAddress="sdf"/>-->
+    <bean class="org.example.Student" name="std1">
+        <property name="studentId" value="22"/>
+        <property name="studentName" value="xyz"/>
+        <property name="marks">
+            <list>
+                <value>45</value>
+                <value>56</value>
+                <value>68</value>
+            </list>
+        </property>
+        <property name="phone">
+            <set>
+            <value>14456598</value>
+            <value>15458545</value>
+            <value>48746568</value>
+            </set>
+        </property>
+        <property name="course">
+            <map>
+                <entry key="java" value="2months"/>
+                <entry key="python" value="3months"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean class="org.example.Student" name="std2">
+        <constructor-arg value="12" type="int"/>
+        <constructor-arg value="ewdf"/>
+        <constructor-arg>
+            <list>
+                <value>45</value>
+                <value>56</value>
+                <value>68</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg>
+            <set>
+                <value>14456598</value>
+                <value>15458545</value>
+                <value>48746568</value>
+            </set>
+        </constructor-arg>
+        <constructor-arg>
+            <map>
+                <entry key="java" value="2months"/>
+                <entry key="python" value="3months"/>
+            </map>
+        </constructor-arg>
+    </bean>
+</beans>
